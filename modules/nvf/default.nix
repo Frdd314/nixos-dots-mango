@@ -45,6 +45,9 @@
                     "oil.nvim" = {
                         package = oil-nvim;
                         setupModule = "oil";
+                        setupOpts = {
+                            show_hidden = true;
+                        };
                     };
                     "smear-cursor.nvim" = {
                        package = smear-cursor-nvim;
