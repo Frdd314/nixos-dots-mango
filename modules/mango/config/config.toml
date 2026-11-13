@@ -1,0 +1,12 @@
+monitor_rule=name:HDMI-A-1,width:1920,height:1080,refresh:75
+
+exec_once=awww-daemon
+
+xkb_rules_layout=us,ru,ua
+bind=ALT,shift_l,switch_keyboard_layout
+
+repeat_delay=200
+repeat_rate=50
+
+source=./binds.toml
+source=./customization.toml

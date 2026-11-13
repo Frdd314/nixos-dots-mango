@@ -1,0 +1,45 @@
+var=term,kitty
+
+bind=SUPER,r,reload_config
+
+bind=ALT,q,spawn,$term
+bind=ALT,space,spawn,rofi -show drun
+bind=ALT,c,killclient
+
+bind=ALT,1,comboview,1
+bind=ALT,2,comboview,2
+bind=ALT,3,comboview,3
+bind=ALT,4,comboview,4
+bind=ALT,5,comboview,5
+bind=ALT,6,comboview,6
+bind=ALT,7,comboview,7
+bind=ALT,8,comboview,8
+bind=ALT,9,comboview,9
+
+bind=ALT,j,focusstack,next
+bind=ALT,k,focusstack,prev
+bind=ALT,f,togglefullscreen
+
+bind=ALT,i,incnmaster,+1
+bind=ALT,d,incnmaster,-1
+bind=ALT,h,setmfact,-0.05
+bind=ALT,l,setmfact,+0.05
+bind=ALT,Return,zoom
+
+bind=SUPER,t,setlayout,tile
+bind=SUPER,f,togglefloating
+bind=SUPER,m,setlayout,monocle
+bind=SUPER+SHIFT,v,setlayout,vertical_scroller
+
+bind=ALT+SHIFT,Up,exchange_client,up
+bind=ALT+SHIFT,Down,exchange_client,down
+bind=ALT+SHIFT,Left,exchange_client,left
+bind=ALT+SHIFT,Right,exchange_client,right
+
+mousebind=ALT,btn_left,moveresize,curmove
+mousebind=ALT,btn_right,moveresize,curresize
+
+bind=NONE,Print,spawn_shell,grim -g "$(slurp)" - | wl-copy -t image/png
+bind=SHIFT,Print,spawn_shell,grim - | wl-copy -t image/png
+bind=SUPER,Print,spawn_shell,grim -g "$(slurp)" - | swappy -f -
+bind=SUPER,v,spawn,kitty clipse
