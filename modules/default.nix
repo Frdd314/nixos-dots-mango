@@ -7,9 +7,8 @@
     ./bash
     ./zsh
     ./vim
-#    ./starship
     ./spicetify
     ./quickshell
-    ./nvf
+    ./neovim
   ];
 }
