@@ -87,7 +87,6 @@
     wget
     kitty
     git
-    steam-run
   ];
 
   fonts.packages = with pkgs; [
