@@ -31,10 +31,6 @@
             lazy = {
                 enable = true;
                 plugins = with pkgs.vimPlugins; {
-                    "nvim-autopairs" = {
-                        package = nvim-autopairs;
-                        setupModule = "nvim-autopairs";
-                    };
                     "lualine.nvim" = {
                         package = lualine-nvim;
                         setupModule = "lualine";

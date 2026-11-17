@@ -17,11 +17,13 @@
 
   home.packages = (with pkgs; [
         #apps
+        ghostty
         discord
         telegram-desktop
         viber
         localsend
         steam
+        protonplus
         thunar
         inputs.freesmlauncher.packages.${system}.freesmlauncher
         onlyoffice-desktopeditors
