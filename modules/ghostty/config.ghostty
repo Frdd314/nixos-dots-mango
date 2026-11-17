@@ -7,6 +7,8 @@ font-thicken-strength = 120
 
 bold-is-bright = true
 
+cursor-color = cdcfd1
+
 background = 050a1e
 foreground = cad3f5
 
