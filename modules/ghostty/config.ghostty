@@ -1,0 +1,8 @@
+font-family = "JetBrains Mono"
+font-size = 12
+
+background = 050a1e
+foreground = cad3f5
+
+background-opacity = 0.75
+background-blur = 1
