@@ -1,4 +1,4 @@
-var=term,kitty
+var=term,ghostty
 
 bind=SUPER,r,reload_config
 
