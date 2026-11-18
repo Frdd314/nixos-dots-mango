@@ -8,7 +8,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     mango = {
       url = "github:mangowm/mango";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,17 +37,15 @@
     freesmlauncher,
     nvf,
     ...
-  } @ inputs:
-  let
+  } @ inputs: let
     system = "x86_64-linux";
 
-    commonSpecialArgs = { inherit inputs; };
+    commonSpecialArgs = {inherit inputs;};
   in {
     nixosConfigurations = {
       nixos-btw = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = commonSpecialArgs;
-
         modules = [
           ./configuration.nix
 

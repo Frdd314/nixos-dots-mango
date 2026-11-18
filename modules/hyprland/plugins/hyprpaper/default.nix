@@ -1,6 +1,9 @@
-{ config, pkgs, hyprland, ... }:
-
 {
+  config,
+  pkgs,
+  hyprland,
+  ...
+}: {
   services.hyprpaper = {
     enable = true;
     settings = {
@@ -8,7 +11,7 @@
       wallpaper = [
         {
           monitor = "HDMI-A-1";
-		  path = "/home/frdd/walls/kitty.jpg";
+          path = "/home/frdd/walls/kitty.jpg";
         }
       ];
     };

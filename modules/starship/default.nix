@@ -1,16 +1,19 @@
-{ config, pgks, ... }:
 {
-    programs.starship = {
-        enable = true;
+  config,
+  pgks,
+  ...
+}: {
+  programs.starship = {
+    enable = true;
 
-        settings = {
-            add_newline = false;
-            character = {
-                success_symbol = "[➜](bold green)";
-                error_symbol = "[➜](bold red)";
-            };
+    settings = {
+      add_newline = false;
+      character = {
+        success_symbol = "[➜](bold green)";
+        error_symbol = "[➜](bold red)";
+      };
 
-            package.disabled = true;
-        };
+      package.disabled = true;
     };
+  };
 }

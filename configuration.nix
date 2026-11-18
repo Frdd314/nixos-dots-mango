@@ -1,10 +1,7 @@
-{ config, lib, pkgs, ... }:
-
-{
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+{pkgs, ...}: {
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   boot.loader.systemd-boot.enable = false;
 
@@ -13,22 +10,22 @@
     efiSupport = true;
     useOSProber = true;
   };
-  boot.loader.efi.canTouchEfiVariables = true;  
+  boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot";
 
-  boot.initrd.kernelModules = [ "amdgpu" ];
+  boot.initrd.kernelModules = ["amdgpu"];
 
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
- 
+
   services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "amdgpu" ];
+  services.xserver.videoDrivers = ["amdgpu"];
 
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk];
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
     config.common.default = "gtk";
   };
 
@@ -43,7 +40,7 @@
   users.users.frdd = {
     isNormalUser = true;
     shell = pkgs.zsh;
-    extraGroups = [ "wheel" "video" "network" ];
+    extraGroups = ["wheel" "video" "network"];
     packages = with pkgs; [
       tree
     ];
@@ -53,14 +50,14 @@
 
   programs.zsh.enable = true;
 
-  environment.shells = with pkgs; [ zsh ];
+  environment.shells = with pkgs; [zsh];
 
   programs.firefox.enable = true;
 
   services.flatpak.enable = true;
 
   programs.dconf.enable = true;
- 
+
   programs.mango = {
     enable = true;
   };
@@ -74,10 +71,10 @@
 
   security.rtkit.enable = true;
   services.pipewire = {
-	enable = true;
-	alsa.enable = true;
-	alsa.support32Bit = true;
-	pulse.enable = true;
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -98,15 +95,13 @@
 
   nix.gc = {
     automatic = true;
-	dates = "daily";
-	options = "--delete-older-than 3d";
+    dates = "daily";
+    options = "--delete-older-than 3d";
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   services.openssh.enable = true;
 
   system.stateVersion = "26.05";
-
 }
-

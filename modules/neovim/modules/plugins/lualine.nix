@@ -1,5 +1,5 @@
 {
-    programs.nvf.settings.vim.statusline.lualine = {
-        enable = true;
-    };
+  programs.nvf.settings.vim.statusline.lualine = {
+    enable = true;
+  };
 }

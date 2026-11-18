@@ -1,49 +1,45 @@
-{ config, pkgs, inputs, ... }:
-
-{
+{inputs, ...}: {
   imports = [
     inputs.nvf.homeManagerModules.default
     ./modules
   ];
 
-    programs.nvf = {
+  programs.nvf = {
+    enable = true;
+    settings.vim = {
+      viAlias = false;
+      vimAlias = false;
+      enableLuaLoader = true;
+
+      options = {
+        number = true;
+        relativenumber = true;
+
+        tabstop = 4;
+        shiftwidth = 4;
+        expandtab = true;
+      };
+
+      theme = {
         enable = true;
-        settings.vim = {
-            viAlias = false;
-            vimAlias = false;
-            enableLuaLoader = true;
+        name = "tokyonight";
+        style = "moon";
+        transparent = true;
+      };
 
-            options = {
-                number = true;
-                relativenumber = true;
-
-                tabstop = 4;
-                shiftwidth = 4;
-                expandtab = true;
-            };
-
-            theme = {
-                enable = true;
-                name = "tokyonight";
-                style = "moon";
-                transparent = true;
-            };
-
-            globals.mapleader = " ";
-            keymaps = [
-                {
-                    key = "<leader>cd";
-                    mode = "n";
-                    action = "<cmd>Oil<CR>";
-                }
-                {
-                    key = "<Esc>";
-                    mode = "n";
-                    action = "<cmd>nohlsearch<CR>";
-                }
-            ];
-        };
+      globals.mapleader = " ";
+      keymaps = [
+        {
+          key = "<leader>cd";
+          mode = "n";
+          action = "<cmd>Oil<CR>";
+        }
+        {
+          key = "<Esc>";
+          mode = "n";
+          action = "<cmd>nohlsearch<CR>";
+        }
+      ];
     };
+  };
 }
-
-

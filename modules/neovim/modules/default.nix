@@ -1,7 +1,7 @@
 {
-    imports = [
-        ./keymaps
-        ./plugins
-        ./lsp
-    ];
+  imports = [
+    ./keymaps
+    ./plugins
+    ./lsp
+  ];
 }
