@@ -15,12 +15,13 @@
         enable = true;
         types = ["golangci-lint"];
       };
-      # dap = {
-      #     enable = true;
-      #     debugger = "delve";
-      # };
+      dap = {
+        enable = true;
+        debugger = "delve";
+      };
       extensions = {
         gopher-nvim.enable = true;
+        nvim-dap-go.enable = true;
       };
     };
   };
