@@ -5,6 +5,7 @@
     ./lualine.nix
     ./blink-cmp.nix
     ./nvim-dap.nix
+    ./nvim-lint.nix
   ];
   programs.nvf = {
     settings.vim = {
