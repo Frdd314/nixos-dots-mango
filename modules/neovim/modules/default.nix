@@ -2,5 +2,6 @@
     imports = [
         ./keymaps
         ./plugins
+        ./lsp
     ];
 }
