@@ -24,6 +24,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    vice.url = "github:splitshotz/Vice";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nvf.url = "github:notashelf/nvf";
   };
@@ -36,6 +37,7 @@
     spicetify-nix,
     freesmlauncher,
     nvf,
+    vice,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -50,6 +52,9 @@
           ./configuration.nix
 
           mango.nixosModules.mango
+
+          vice.nixosModules.default
+          {services.vice.enable = true;}
 
           home-manager.nixosModules.home-manager
           {

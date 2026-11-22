@@ -223,6 +223,22 @@
         "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
       }
     },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1789921291,
+        "narHash": "sha256-Ft/BRnIqw1MywFoXydKobjjWmDFgDdYtSpJliE8+yUw=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "44a91898084f46797b5fac650c7e8c9ac38c43d4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nvf": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -271,7 +287,8 @@
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
         "quickshell": "quickshell",
-        "spicetify-nix": "spicetify-nix"
+        "spicetify-nix": "spicetify-nix",
+        "vice": "vice"
       }
     },
     "scenefx": {
@@ -343,6 +360,24 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "vice": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1794919665,
+        "narHash": "sha256-4ORg2vApKKBYe0q2wdcxXky6ylSpS8iEHZ2Si7TIXS0=",
+        "owner": "splitshotz",
+        "repo": "Vice",
+        "rev": "febbaa015ce78f0eb02e91a1bef5c853bcf5605f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "splitshotz",
+        "repo": "Vice",
         "type": "github"
       }
     }
