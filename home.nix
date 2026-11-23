@@ -42,6 +42,7 @@
     quickshell
     rclone
     gh
+    libqalculate
 
     #misc
     fastfetch
