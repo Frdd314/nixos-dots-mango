@@ -40,7 +40,7 @@
   users.users.frdd = {
     isNormalUser = true;
     shell = pkgs.zsh;
-    extraGroups = ["wheel" "video" "network"];
+    extraGroups = ["wheel" "video" "network" "input"];
     packages = with pkgs; [
       tree
     ];
