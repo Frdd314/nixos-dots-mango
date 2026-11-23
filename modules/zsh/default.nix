@@ -26,7 +26,7 @@
       nixrebuild = "sudo nixos-rebuild switch --flake /etc/nixos#nixos-btw";
       nixgarbage = "sudo nix-collect-garbage";
       nixoldgen = "sudo nix-collect-garbage -d";
-      nixoptimise = "sudo nix-store --optimise";
+      nixoptimise = "sudo nix store optimise -v";
       nixconf = "sudo -E nvim /etc/nixos/configuration.nix";
       nixhome = "sudo -E nvim /etc/nixos/home.nix";
       nixflake = "sudo -E nvim /etc/nixos/flake.nix";
